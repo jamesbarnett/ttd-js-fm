@@ -1,3 +1,3 @@
 export default {
-  base: "/ttd-js-ffm/",
+  base: "/ttd-js-fm/",
 };

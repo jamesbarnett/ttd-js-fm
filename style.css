@@ -6,21 +6,21 @@
   font-style: normal;
   font-family: "Rubik";
   font-weight: 300;
-  src: url("fonts/Rubik-Light.woff2") format("woff2");
+  src: url("/assets/fonts/Rubik-Light.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
   font-style: normal;
   font-family: "Rubik";
   font-weight: 400;
-  src: url("fonts/Rubik-Regular.woff2") format("woff2");
+  src: url("/assets/fonts/Rubik-Regular.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
   font-style: normal;
   font-family: "Rubik";
   font-weight: 500;
-  src: url("fonts/Rubik-Medium.woff2") format("woff2");
+  src: url("/assets/fonts/Rubik-Medium.woff2") format("woff2");
 }
 
 :root {
@@ -73,5 +73,5 @@
 
 body {
   font-family: var(--ff-primary);
-  background: linear-gradient(22.5deg, #131313, #A090A0);
+  background: radial-gradient( #A090A0 0 5rem, #131313);
 }

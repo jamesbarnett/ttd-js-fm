@@ -3,24 +3,24 @@
 
 @font-face {
   font-display: swap;
-  font-style: regular;
+  font-style: normal;
   font-family: "Rubik";
   font-weight: 300;
-  src: url("/fonts/Rubik-Light.woff2") format("woff2");
+  src: url("fonts/Rubik-Light.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
-  font-style: regular;
+  font-style: normal;
   font-family: "Rubik";
   font-weight: 400;
-  src: url("/fonts/Rubik-Regular.woff2") format("woff2");
+  src: url("fonts/Rubik-Regular.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
-  font-style: regular;
+  font-style: normal;
   font-family: "Rubik";
   font-weight: 500;
-  src: url("/fonts/Rubik-Medium.woff2") format("woff2");
+  src: url("fonts/Rubik-Medium.woff2") format("woff2");
 }
 
 :root {

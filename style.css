@@ -1,0 +1,77 @@
+/*- Family: [Rubik](https://fonts.google.com/specimen/Rubik)*/
+/*- Weights: 300, 400, 500*/
+
+@font-face {
+  font-display: swap;
+  font-style: regular;
+  font-family: "Rubik";
+  font-weight: 300;
+  src: url("/fonts/Rubik-Light.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-style: regular;
+  font-family: "Rubik";
+  font-weight: 400;
+  src: url("/fonts/Rubik-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-style: regular;
+  font-family: "Rubik";
+  font-weight: 500;
+  src: url("/fonts/Rubik-Medium.woff2") format("woff2");
+}
+
+:root {
+  --ff-primary: "Rubik", sans-serif;
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-500: 500;
+  --font-weight: --fw-300;
+
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+/*## Colors
+
+### Primary
+
+- Blue: hsl(246, 80%, 60%)
+
+- Light red (work): hsl(15, 100%, 70%)
+- Soft blue (play): hsl(195, 74%, 62%)
+- Light red (study): hsl(348, 100%, 68%)
+- Lime green (exercise): hsl(145, 58%, 55%)
+- Violet (social): hsl(264, 64%, 52%)
+- Soft orange (self care): hsl(43, 84%, 65%)
+
+### Neutral
+
+- Very dark blue: hsl(226, 43%, 10%)
+- Dark blue: hsl(235, 46%, 20%)
+- Desaturated blue: hsl(235, 45%, 61%)
+- Pale Blue: hsl(236, 100%, 87%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 18px (card titles e.g. Work, Play)
+*/
+}
+
+body {
+  font-family: var(--ff-primary);
+  background: linear-gradient(22.5deg, #131313, #A090A0);
+}

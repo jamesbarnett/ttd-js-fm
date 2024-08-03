@@ -44,7 +44,12 @@ navLinks.forEach((e) => {
 })
 
 function loadData() {
-  fetch('data.json').then((request) => {
+  const headers = new Headers()
+  headers.append("Content-Type", "application/json");
+
+  fetch('data.json', { 
+    headers: headers,
+  }).then((request) => {
     if (!request.ok) {
       console.log('Failed to load /data.json')
       return 

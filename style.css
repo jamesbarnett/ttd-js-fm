@@ -170,7 +170,7 @@ body {
 }
 
 main {
-  min-width: 20.25rem;
+  min-width: 18rem;
   max-width: 30rem;
   margin-inline: auto;
   margin-block: var(--s-m);
@@ -302,10 +302,12 @@ header > div > p {
 
 .category h2 {
   font-size: var(--fs-500);
-  padding-top: var(--s-l);
+  padding-top: var(--s-m);
+  padding-bottom: var(--s-xs);
   align-self: center;
   margin: 0;
 }
+
 .category-wrapper img {
   padding-block-start: var(--s-l);
   justify-self: end;

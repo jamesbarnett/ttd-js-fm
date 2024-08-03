@@ -51,7 +51,7 @@ function loadData() {
   let requestUrl = "/ttd-js-fm/data.json"
 
   if (isLocal.test(window.location)) {
-    requestUrl = "public/data.json"
+    requestUrl = "data.json"
   }
 
   fetch(requestUrl, { 
@@ -69,7 +69,6 @@ function loadData() {
   }).then((categories) => {
     const trackedCategories = ["Work", "Play", "Study", "Exercise",
       "Social", "Self Care"]
-
 
     const dataMap = new Map(trackedCategories.map((c) => {
       return [kebabify(c), categories.find(c)]

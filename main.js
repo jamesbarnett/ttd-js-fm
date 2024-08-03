@@ -46,8 +46,15 @@ navLinks.forEach((e) => {
 function loadData() {
   const headers = new Headers()
   headers.append("Content-Type", "application/json");
+  
+  const isLocal = new RegExp('localhost')
+  const requestUrl = "assets/data.json"
 
-  fetch('data.json', { 
+  if (!isLocal.test(requestUrl)) {
+    requestUrl = "/" + requestUrl
+  }
+
+  fetch(requestUrl, { 
     headers: headers,
   }).then((request) => {
     if (!request.ok) {

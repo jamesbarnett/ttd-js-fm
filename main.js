@@ -47,12 +47,7 @@ function loadData() {
   const headers = new Headers()
   headers.append("Content-Type", "application/json");
   
-  const isLocal = new RegExp('localhost')
-  const requestUrl = "assets/data.json"
-
-  if (!isLocal.test(requestUrl)) {
-    requestUrl = "/" + requestUrl
-  }
+  const requestUrl = "/ttd-js-fm/assets/data.json"
 
   fetch(requestUrl, { 
     headers: headers,

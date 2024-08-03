@@ -46,14 +46,19 @@ navLinks.forEach((e) => {
 function loadData() {
   const headers = new Headers()
   headers.append("Content-Type", "application/json");
-  
-  const requestUrl = "/ttd-js-fm/assets/data.json"
+ 
+  const isLocal = new RegExp("localhost")
+  let requestUrl = "/ttd-js-fm/data.json"
+
+  if (isLocal.test(window.location)) {
+    requestUrl = "public/data.json"
+  }
 
   fetch(requestUrl, { 
     headers: headers,
   }).then((request) => {
     if (!request.ok) {
-      console.log('Failed to load /data.json')
+      console.log(`Failed to load ${requestUrl}`)
       return 
     }
 

@@ -24,15 +24,44 @@
 }
 
 :root {
-  --ff-primary: "Rubik", sans-serif;
+  --fs-100: 0.8125rem;
+  --fs-200: 0.875rem;
+  --fs-300: 0.9375rem;
+  --fs-350: 1rem;
+  --fs-400: 1.125rem;
+  --fs-500: 1.25rem;
+  --fs-600: 1.375rem;
+  --fs-700: 1.5rem;
+  --fs-800: 1.75rem;
+  --fs-900: 2.25rem;
+  --fs-1000: 3rem;
+
+  --fw-100: 100;
+  --fw-200: 200;
   --fw-300: 300;
   --fw-400: 400;
   --fw-500: 500;
-  --font-weight: --fw-300;
+  --fw-600: 600;
+  --fw-700: 700;
+  --fw-800: 800;
+  --fw-900: 900;
 
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --s-3xs: 0.0625rem;
+  --s-xxs: 0.125rem;
+  --s-xs: 0.25rem;
+  --s-s: 0.5rem;
+  --s-m: 1rem;
+  --s-l: 1.5rem;
+  --s-xl: 2rem;
+  --s-xxl: 3rem;
+  --s-3xl: 4.25rem;
+  --s-500: 1.75rem;
+
+  --ff-primary: "Rubik", sans-serif;
+  --font-weight: var(--fw-300);
+  --fs-base: var(--fs-400);
+  font-family: var(--ff-primary);
   line-height: 1.5;
-  font-weight: 400;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -43,32 +72,20 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-/*## Colors
+  --clr-blue: hsl(246, 80%, 60%);
+  --clr-bright-peach: hsl(15, 100%, 70%);
+  --clr-soft-blue: hsl(195, 74%, 62%);
+  --clr-light-red: hsl(348, 100%, 68%);
+  --clr-lime-green: hsl(145, 58%, 55%);
+  --clr-violet: hsl(264, 64%, 52%);
+  --clr-soft-orange: hsl(43, 84%, 65%);
 
-### Primary
+  --clr-very-dark-blue: hsl(226, 43%, 10%);
+  --clr-dark-blue: hsl(235, 46%, 20%);
+  --clr-desaturated-blue: hsl(235, 45%, 61%);
+  --clr-pale-blue: hsl(236, 100%, 87%);
 
-- Blue: hsl(246, 80%, 60%)
-
-- Light red (work): hsl(15, 100%, 70%)
-- Soft blue (play): hsl(195, 74%, 62%)
-- Light red (study): hsl(348, 100%, 68%)
-- Lime green (exercise): hsl(145, 58%, 55%)
-- Violet (social): hsl(264, 64%, 52%)
-- Soft orange (self care): hsl(43, 84%, 65%)
-
-### Neutral
-
-- Very dark blue: hsl(226, 43%, 10%)
-- Dark blue: hsl(235, 46%, 20%)
-- Desaturated blue: hsl(235, 45%, 61%)
-- Pale Blue: hsl(236, 100%, 87%)
-
-## Typography
-
-### Body Copy
-
-- Font size: 18px (card titles e.g. Work, Play)
-*/
+  --card-width: 17.8125rem;
 }
 
 /* Andy Bell reset - https://piccalil.li/blog/a-more-modern-css-reset/ */
@@ -149,5 +166,251 @@ textarea:not([rows]) {
 
 body {
   font-family: var(--ff-primary);
-  background: radial-gradient( #A090A0 0 5rem, #131313);
+  background-color: var(--clr-very-dark-blue);
+}
+
+main {
+  min-width: 20.25rem;
+  max-width: 30rem;
+  margin-inline: auto;
+  margin-block: var(--s-m);
+}
+
+.user {
+  display: grid;
+  gap: var(--s-500);
+  border-radius: var(--s-m);
+}
+
+.user div:first-child {
+  background-color: var(--clr-dark-blue);
+  border-radius: 1rem;
+}
+
+nav {
+  padding-inline: var(--s-m);
+  padding-block: var(--s-s);
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    padding:0;
+  }
+
+  a {
+    color: var(--clr-desaturated-blue);
+    text-decoration: none;
+    font-size: var(--fs-500);
+  }
+
+  a.active {
+    color: white;
+  }
+  
+  margin: 0;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.content {
+  padding: 1rem;
+}
+
+.user header {
+  display: flex;
+  width: inherit;
+  background: var(--clr-blue);
+  border-radius: 1rem;
+  align-items: center;
+}
+
+.user p:first-child {
+  margin: 0;
+}
+
+header h1 {
+  margin: 0;
+  font-weight: 300;
+  font-size: var(--fs-800);
+}
+
+header > div > p {
+  color: var(--clr-pale-blue);
+}
+
+.user img:first-child {
+  border-radius: 50%;
+  border: 0.25rem solid white;
+  height: 5rem;
+  aspect-ratio: 1;
+  margin: var(--s-xl);
+  margin-inline-end: var(--s-m);
+}
+
+.category[data-category="work"] {
+  background-color: var(--clr-bright-peach);
+  background-image: url("/assets/images/icon-work.svg");
+}
+
+.category[data-category="play"] {
+  background-color: var(--clr-soft-blue);
+  background-image: url("/assets/images/icon-play.svg");
+}
+
+.category[data-category="study"] {
+  background-color: var(--clr-light-red);
+  background-image: url("/assets/images/icon-study.svg");
+}
+
+.category[data-category="exercise"] {
+  background-color: var(--clr-lime-green);
+  background-image: url("/assets/images/icon-exercise.svg");
+}
+
+.category[data-category="social"] {
+  background-color: var(--clr-violet);
+  background-image: url("/assets/images/icon-social.svg");
+}
+
+.category[data-category="self-care"] {
+  background-color: var(--clr-soft-orange);
+  background-image: url("/assets/images/icon-self-care.svg");
+}
+
+.category {
+  display: grid;
+  border-radius: var(--s-m);
+  padding-block-start: var(--s-l);
+  background-repeat: no-repeat;
+  background-position: calc(100% - var(--s-l)) -0.75rem;
+  background-size: 5.625rem 5.625rem;
+  grid-template-columns: auto;
+}
+
+.category-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--s-m);
+  border-radius:var(--s-m);
+  background-color: var(--clr-dark-blue);
+  padding-inline: var(--s-xl);
+  padding-block: var(--s-m);
+}
+
+.category h2 {
+  font-size: var(--fs-500);
+  padding-top: var(--s-l);
+  align-self: center;
+  margin: 0;
+}
+.category-wrapper img {
+  padding-block-start: var(--s-l);
+  justify-self: end;
+  align-self: center;
+}
+
+.category-wrapper p[data-period="current"] {
+  font-size: var(--fs-900);
+  margin: 0;
+  align-self: baseline;
+  font-weight:
+}
+
+.category-wrapper p[data-period="previous"] {
+  justify-self: end; 
+  align-self: center;
+  margin: 0;
+  color: var(--clr-pale-blue);
+}
+
+@media (min-width: 60em) {
+  .user {
+    max-width: 1250px;
+    display: grid;
+    grid-template-columns: 18rem repeat(3, 1fr);
+    grid-template-areas:
+      "a b c d"
+      "a e f g"; 
+  }
+
+  main {
+    max-width: 1250px;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header img {
+    align-self: flex-start;
+  }
+
+  header h1 {
+    font-size: var(--fs-1000);
+  }
+
+  header div {
+    padding-left: var(--s-xl);
+    padding-block-end: calc(2.5 *var(--s-xl));
+  }
+
+  .user div:first-child {
+    grid-area: a;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    margin-inline: var(--s-m);
+  }
+
+  nav li:is(:not(:last-child)) {
+    padding-block-end: var(--s-m);
+  }
+
+  .category {
+  }
+
+  .category-wrapper {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    height: 15rem;
+  }
+
+  .category-wrapper h2 {
+    grid-row: 1;
+  }
+
+  .category-wrapper img {
+    grid-row: 1;
+  }
+  
+  .category-wrapper p[data-period="current"] {
+    grid-row: 2;
+    margin-right: auto;
+    width: 100%;
+    font-size: 4rem;
+    font-weight: var(--fw-300);
+  }
+
+  .category-wrapper p[data-period="previous"] {
+    grid-row: 3;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    width: 100%;
+    margin-inline-end: auto;
+    padding-right: 6rem;
+    font-size: var(--fs-300);
+  }
+}
+
+@media (min-width: 1000px) {
+  .category-wrapper p[data-period="previous"] {
+    white-space: nowrap;
+  }
 }

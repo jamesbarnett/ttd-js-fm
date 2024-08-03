@@ -9,74 +9,58 @@
   </head>
   <body>
     <main id="app">
-      <article>
-        <img src="/assets/images/image-jeremy.png" alt="" />
-        <p>Report for</p>
-        <h1>Jeremy Robson</h1>
-        <nav>
-          Daily
-          Weekly
-          Monthly
-        </nav>
-        <article data-current="true">
-          <h2>Work</h2>
-          <!-- hamburger menu -->
-          <p>5hrs</p> <!-- daily -->
-          Previous - 7hrs <!-- daily -->
-          <p>32hrs</p> <!-- weekly -->
-          Previous - 36hrs <!-- weekly -->
-          <p>103hrs</p> <!-- monthly -->
-          Previous - 128hrs <!-- monthly -->
+      <article class="user content">
+        <div>
+          <header>
+            <img src="/assets/images/image-jeremy.png" alt="" />
+            <div>
+              <p>Report for</p>
+              <h1>Jeremy Robson</h1>
+            </div>
+          </header>
+          <nav>
+            <ul>
+              <li><a id="daily" class="inactive" href="#">Daily</a></li>
+              <li><a id="weekly" class="active" href="#">Weekly</a></li>
+              <li><a id="monthly" class="inactive" href="#">Monthly</a></li>
+            </ul>
+          </nav>
+        </div>
+        <article class="category" data-current="true" data-category="work">
+          <div class="category-wrapper">
+            <h2>Work</h2>
+            <img src="/assets/images/icon-ellipsis.svg" alt="menu">
+          </div>
         </article>
-
-        <article>
-          <h2>Play</h2>
-          <p>1hr</p> <!-- daily -->
-          Previous - 2hrs <!-- daily -->
-          <p>10hrs</p> <!-- weekly -->
-          Previous - 8hrs <!-- weekly -->
-          <p>23hrs</p> <!-- monthly -->
-          Previous - 29hrs <!-- monthly -->
+        <article class="category" data-category="play">
+          <div class="category-wrapper">
+            <h2>Play</h2>
+            <img src="/assets/images/icon-ellipsis.svg" alt="menu">
+          </div>
         </article>
-
-        <article>
-          <h2>Study</h2>
-          <p>0hrs</p> <!-- daily -->
-          Previous - 1hr <!-- daily -->
-          <p>4hrs</p> <!-- weekly -->
-          Previous - 7hrs <!-- weekly -->
-          13hrs <!-- monthly -->
-          Previous - 19hrs <!-- monthly -->
+        <article class="category" data-category="study">
+          <div class="category-wrapper">
+            <h2>Study</h2>
+            <img src="/assets/images/icon-ellipsis.svg" alt="menu">
+          </div>
         </article>
-
-        <article>
-          <h2>Exercise</h2>
-          <p>1hr</p> <!-- daily -->
-          Previous - 1hr <!-- daily -->
-          <p>4hrs</p> <!-- weekly -->
-          Previous - 5hrs <!-- weekly -->
-          11hrs <!-- monthly -->
-          Previous - 18hrs <!-- monthly -->
+        <article class="category" data-category="exercise">
+          <div class="category-wrapper">
+            <h2>Exercise</h2>
+            <img src="/assets/images/icon-ellipsis.svg" alt="menu">
+          </div>
         </article>
-
-        <article>
-          <h2>Social</h2>
-          <p>1hr</p> <!-- daily -->
-          Previous - 3hrs <!-- daily -->
-          <p>5hrs</p> <!-- weekly -->
-          Previous - 10hrs <!-- weekly -->
-          21hrs <!-- monthly -->
-          Previous - 23hrs <!-- monthly -->
+        <article class="category" data-category="social">
+          <div class="category-wrapper">
+            <h2>Social</h2>
+            <img src="/assets/images/icon-ellipsis.svg" alt="menu">
+          </div>
         </article>
-
-        <article>
-          <h2>Self</h2> Care
-          <p>0hrs</p> <!-- daily -->
-          Previous - 1hr <!-- daily -->
-          <p>2hrs</p> <!-- weekly -->
-          Previous - 2hrs <!-- weekly -->
-          7hrs <!-- monthly -->
-          Previous - 11hrs <!-- monthly -->
+        <article class="category" data-category="self-care">
+          <div class="category-wrapper">
+            <h2>Self Care</h2> 
+            <img src="/assets/images/icon-ellipsis.svg" alt="menu">
+          </div>
         </article>
     </main>
   </body>
